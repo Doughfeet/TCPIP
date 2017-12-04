@@ -35,7 +35,7 @@
             this.TxtServerPort = new System.Windows.Forms.TextBox();
             this.BtnStop = new System.Windows.Forms.Button();
             this.TxtStatus = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.TxtSend = new System.Windows.Forms.TextBox();
             this.TxtMessage = new System.Windows.Forms.TextBox();
             this.TxtClientPort = new System.Windows.Forms.TextBox();
             this.TxtIPClient = new System.Windows.Forms.TextBox();
@@ -113,13 +113,13 @@
             this.TxtStatus.Size = new System.Drawing.Size(1191, 185);
             this.TxtStatus.TabIndex = 3;
             // 
-            // textBox1
+            // TxtSend
             // 
-            this.textBox1.Location = new System.Drawing.Point(151, 794);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(873, 116);
-            this.textBox1.TabIndex = 15;
+            this.TxtSend.Location = new System.Drawing.Point(151, 794);
+            this.TxtSend.Multiline = true;
+            this.TxtSend.Name = "TxtSend";
+            this.TxtSend.Size = new System.Drawing.Size(873, 116);
+            this.TxtSend.TabIndex = 15;
             // 
             // TxtMessage
             // 
@@ -128,6 +128,7 @@
             this.TxtMessage.Name = "TxtMessage";
             this.TxtMessage.Size = new System.Drawing.Size(1170, 146);
             this.TxtMessage.TabIndex = 16;
+            this.TxtMessage.TextChanged += new System.EventHandler(this.TxtMessage_TextChanged);
             // 
             // TxtClientPort
             // 
@@ -163,6 +164,7 @@
             this.BtnSend.TabIndex = 12;
             this.BtnSend.Text = "Send";
             this.BtnSend.UseVisualStyleBackColor = true;
+            this.BtnSend.Click += new System.EventHandler(this.BtnSend_Click);
             // 
             // label3
             // 
@@ -217,7 +219,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1440, 988);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.TxtSend);
             this.Controls.Add(this.TxtMessage);
             this.Controls.Add(this.TxtClientPort);
             this.Controls.Add(this.TxtIPClient);
@@ -251,7 +253,7 @@
         private System.Windows.Forms.TextBox TxtServerPort;
         private System.Windows.Forms.Button BtnStop;
         private System.Windows.Forms.TextBox TxtStatus;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox TxtSend;
         private System.Windows.Forms.TextBox TxtMessage;
         private System.Windows.Forms.TextBox TxtClientPort;
         private System.Windows.Forms.TextBox TxtIPClient;
