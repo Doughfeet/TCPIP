@@ -48,6 +48,25 @@ namespace ServerClient
             STW = new StreamWriter(client.GetStream());
             STW.AutoFlush = true;
 
+            backgroundWorker1.RunWorkerAsync(); // Start reiceving Data in the background
+            backgroundWorker2.WorkerSupportsCancellation = true; // Ability to cancel this thread
+
+
+        }
+
+        private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e) // receive data
+        {
+
+        }
+
+        private void backgroundWorker2_DoWork(object sender, DoWorkEventArgs e) // send data
+        {
+
+        }
+
+        private void BtnConnect_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
