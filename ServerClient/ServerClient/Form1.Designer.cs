@@ -31,20 +31,19 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.BtnStart = new System.Windows.Forms.Button();
-            this.TxtHost = new System.Windows.Forms.TextBox();
-            this.TxtPort = new System.Windows.Forms.TextBox();
+            this.TxtIPServer = new System.Windows.Forms.TextBox();
+            this.TxtServerPort = new System.Windows.Forms.TextBox();
             this.BtnStop = new System.Windows.Forms.Button();
             this.TxtStatus = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.TxtMessage = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.TxtClientPort = new System.Windows.Forms.TextBox();
+            this.TxtIPClient = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.BtnSend = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -54,9 +53,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(40, 118);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(105, 42);
+            this.label1.Size = new System.Drawing.Size(62, 42);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Host:";
+            this.label1.Text = "IP:";
             // 
             // label2
             // 
@@ -78,21 +77,21 @@
             this.BtnStart.UseVisualStyleBackColor = true;
             this.BtnStart.Click += new System.EventHandler(this.BtnStart_Click);
             // 
-            // TxtHost
+            // TxtIPServer
             // 
-            this.TxtHost.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtHost.Location = new System.Drawing.Point(151, 111);
-            this.TxtHost.Name = "TxtHost";
-            this.TxtHost.Size = new System.Drawing.Size(247, 49);
-            this.TxtHost.TabIndex = 2;
+            this.TxtIPServer.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtIPServer.Location = new System.Drawing.Point(151, 111);
+            this.TxtIPServer.Name = "TxtIPServer";
+            this.TxtIPServer.Size = new System.Drawing.Size(247, 49);
+            this.TxtIPServer.TabIndex = 2;
             // 
-            // TxtPort
+            // TxtServerPort
             // 
-            this.TxtPort.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtPort.Location = new System.Drawing.Point(520, 111);
-            this.TxtPort.Name = "TxtPort";
-            this.TxtPort.Size = new System.Drawing.Size(247, 49);
-            this.TxtPort.TabIndex = 2;
+            this.TxtServerPort.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtServerPort.Location = new System.Drawing.Point(520, 111);
+            this.TxtServerPort.Name = "TxtServerPort";
+            this.TxtServerPort.Size = new System.Drawing.Size(247, 49);
+            this.TxtServerPort.TabIndex = 2;
             // 
             // BtnStop
             // 
@@ -128,21 +127,21 @@
             this.TxtMessage.Size = new System.Drawing.Size(1170, 146);
             this.TxtMessage.TabIndex = 16;
             // 
-            // textBox2
+            // TxtClientPort
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(520, 531);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(247, 49);
-            this.textBox2.TabIndex = 13;
+            this.TxtClientPort.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtClientPort.Location = new System.Drawing.Point(520, 531);
+            this.TxtClientPort.Name = "TxtClientPort";
+            this.TxtClientPort.Size = new System.Drawing.Size(247, 49);
+            this.TxtClientPort.TabIndex = 13;
             // 
-            // textBox3
+            // TxtIPClient
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(151, 531);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(247, 49);
-            this.textBox3.TabIndex = 14;
+            this.TxtIPClient.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtIPClient.Location = new System.Drawing.Point(151, 531);
+            this.TxtIPClient.Name = "TxtIPClient";
+            this.TxtIPClient.Size = new System.Drawing.Size(247, 49);
+            this.TxtIPClient.TabIndex = 14;
             // 
             // button1
             // 
@@ -192,25 +191,15 @@
             this.label5.TabIndex = 0;
             this.label5.Text = "Server";
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(40, 531);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(105, 42);
-            this.label6.TabIndex = 10;
-            this.label6.Text = "Host:";
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(40, 538);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(105, 42);
+            this.label7.Size = new System.Drawing.Size(62, 42);
             this.label7.TabIndex = 10;
-            this.label7.Text = "Host:";
+            this.label7.Text = "IP:";
             // 
             // Form1
             // 
@@ -219,17 +208,16 @@
             this.ClientSize = new System.Drawing.Size(1440, 1320);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.TxtMessage);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.TxtClientPort);
+            this.Controls.Add(this.TxtIPClient);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.BtnSend);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.TxtStatus);
-            this.Controls.Add(this.TxtPort);
-            this.Controls.Add(this.TxtHost);
+            this.Controls.Add(this.TxtServerPort);
+            this.Controls.Add(this.TxtIPServer);
             this.Controls.Add(this.BtnStop);
             this.Controls.Add(this.BtnStart);
             this.Controls.Add(this.label2);
@@ -248,20 +236,19 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button BtnStart;
-        private System.Windows.Forms.TextBox TxtHost;
-        private System.Windows.Forms.TextBox TxtPort;
+        private System.Windows.Forms.TextBox TxtIPServer;
+        private System.Windows.Forms.TextBox TxtServerPort;
         private System.Windows.Forms.Button BtnStop;
         private System.Windows.Forms.TextBox TxtStatus;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox TxtMessage;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox TxtClientPort;
+        private System.Windows.Forms.TextBox TxtIPClient;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button BtnSend;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
     }
 }
